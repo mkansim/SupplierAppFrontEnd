@@ -1,0 +1,15 @@
+<div style="margin: 40px	;"> 
+
+
+  <form class="class="form-inline justify-content-center>
+    <div class="form-group">
+      <label>Supplier Name</label>
+      <input #supplierName class="form-control" type="text" placeholder="Enter supplier name">
+    </div>
+    <div class="form-group">
+      <label>Telephone</label>
+      <input #supplierPhone class="form-control" type="text" placeholder="Enter supplier phone number">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)='addSupplier(supplierName.value, supplierPhone.value)'>Save</button>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<div style="margin: 40px	;"> 
+
+
+    <form class="class="form-inline justify-content-center>
+      <div class="form-group">
+        <label>Supplier Search</label>
+        <input #supplierName class="form-control" type="text" placeholder="Enter supplier name">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)='searchSupplier(supplierName.value)'>Search</button>
+    </form>
+    <br>
+    <div *ngIf="supplierFound | async as supplier">
+        <label>Supplier Name: {{supplier.Name}}</label>
+        <label>Supplier Number: {{supplier.Phone}}</label>
+    </div>
+  </div>
