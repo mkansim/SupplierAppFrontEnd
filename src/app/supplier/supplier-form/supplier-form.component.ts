@@ -20,7 +20,7 @@ export class SupplierFormComponent implements OnInit {
     this.postData = {'Name':name, 'Phone':phone};
     this.service.addSupplier(this.postData).subscribe(result =>
       {
-          alert(result);
+          alert('Supplier Added Successfully');
       });
     
   }  

@@ -1,14 +1,14 @@
 <div style="margin: 40px	;"> 
 
 
-  <form class="class="form-inline justify-content-center>
+  <form class="class="form-inline justify-content-center onsubmit="event.stopPropagation();">
     <div class="form-group">
       <label>Supplier Name</label>
-      <input #supplierName class="form-control" type="text" placeholder="Enter supplier name">
+      <input #supplierName class="form-control" type="text" placeholder="Enter supplier name" oninput="event.stopPropagation();">
     </div>
     <div class="form-group">
       <label>Telephone</label>
-      <input #supplierPhone class="form-control" type="text" placeholder="Enter supplier phone number">
+      <input #supplierPhone class="form-control" type="text" placeholder="Enter supplier phone number" oninput="event.stopPropagation();">
     </div>
     <button type="submit" class="btn btn-primary" (click)='addSupplier(supplierName.value, supplierPhone.value)'>Save</button>
   </form>

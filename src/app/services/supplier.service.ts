@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Supplier} from 'src/app/models/supplier-model';
 import {Observable} from 'rxjs';
@@ -16,8 +16,8 @@ export class SupplierService {
   }
 
   getSupplier(name:string) : Observable<Supplier> {
-
-    return this.client.get<Supplier>(this.ApiUrl + '/GetByName?name=' + name);
+    var data = this.client.get<Supplier>(this.ApiUrl + '/GetByName?name=' + name);
+    return data;
   }
 
   addSupplier(postData:any){
